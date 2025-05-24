@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    min-width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.site {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.site span:first-child {
+    color: #000;
+}
+
+.site span:last-child {
+    color: #54aef2;
+}
+
+.items {
+    display: flex;
+    color: red;
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    color: #54aef2;
+    margin-right: 20px;
+}
+
+
+.menu__nav {
+    display: none;
+}
+
+.menu__nav ul {
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+}
+
+.menu_nav li {
+    display: inline-block;
+}
+
+li a {
+    color: #778795;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu {
+        display: flex;
+        min-width: 70%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .site {
+        display: flex;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .hamburger-icon{
+        display: flex;
+        position: absolute;
+        color: #54aef2;
+        top: 10px;
+        right: 110px;
+    }
+
+    .menu_nav {
+        display: none;
+        flex-direction: column;
+  
+        /*position: absolute;
+        top: 80px;
+        left: 110px;
+        width: 100%; 
+        border-radius: 5px;
+        padding-right: 300px; */
+    }
+
+    .menu_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        font-size: 1rem;
+        padding: 10px;
+        
+    }
+
+    ul a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .hamburger-icon {
+        display: block;
+        cursor: pointer;
+        color: #778795;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        margin-right: 10px;
+    }
+
+    .menu_nav.active {
+        display: flex;
+    }
+}
